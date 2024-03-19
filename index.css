@@ -109,7 +109,7 @@ header a:hover{
 }
 
 #Features .container{
-    padding: 80px 12px;
+    padding: 110px 12px;
 }
 
 #Features h2{
@@ -156,13 +156,26 @@ header a:hover{
     ,url("media/1.png");
 }
 
-.cartas:last-child{
+.cartas:nth-child(4){
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ) 
     ,url("media/4.png");
+}
+
+.cartas:last-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) 
+    ,url("media/5.png");
+}
+
+.scrolling-buttons-container{
+    display: none;
 }
 
 @media (min-width:720px){
@@ -225,8 +238,8 @@ header a:hover{
     }
 
     #Features .cartas{
-        padding: 50px;
-        background-size: 100% 260px;
+        padding: 42px 200px;
+        background-size: 100% 350px;
         background-repeat: no-repeat;
         background-position-y: 0;
         background-color: rgb(50,50,50);
@@ -260,13 +273,22 @@ header a:hover{
         ,url("media/1.png")
     }
 
-    .cartas:last-child{
+    .cartas:nth-child(4){
         background-image: linear-gradient(
             0deg,
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         ) 
         ,url("media/4.png");
+    }
+
+    .cartas:last-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ) 
+        ,url("media/5.png");
     }
 
 
@@ -277,6 +299,27 @@ header a:hover{
 
     a:hover{
         color: rgb(91, 29, 93);
+    }
+
+    .scrolling-container{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+      
+    .scrolling-container::-webkit-scrollbar{
+        display: none;
+    }
+
+    .scrolling-buttons-container{
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        cursor: default;
     }
 
 }
